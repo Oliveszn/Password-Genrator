@@ -1,0 +1,102 @@
+$first-color: #18171f;
+$second-color: #24232c;
+$second-color-alt: rgba(0, 0, 0, 0.4);
+$btn-color: #a4ffaf;
+$btn-color-alt: #23d438;
+$neutral: #fff;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $first-color;
+  color: $neutral;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+h2 {
+  text-align: center;
+  margin: 0.7em 0 1.3em;
+}
+
+input [type="checkbox"] {
+  margin-right: 0;
+}
+
+.container {
+  background-color: $second-color;
+  box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.9), -3px -5px 10px rgba(0, 0, 0, 0.9);
+  padding: 1.3rem;
+  width: 390px;
+  max-width: 100%;
+
+  .result-container {
+    background-color: $second-color-alt;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    padding: 0.8rem 1rem;
+    width: 100%;
+    min-height: 40px;
+
+    .btn {
+      align-items: center;
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      height: 30px;
+      width: 30px;
+    }
+
+    #result {
+      word-wrap: break-word;
+      max-width: calc(100% - 40px);
+      height: auto;
+    }
+  }
+
+  .btn {
+    border: none;
+    cursor: pointer;
+    color: $first-color;
+    padding: 0.6em 0.8em;
+    background-color: $btn-color;
+  }
+
+  .btn-large {
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: bold;
+
+    &:hover {
+      background: $btn-color-alt;
+      transition: 0.5s;
+    }
+  }
+
+  .setting {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1em 0;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .result-container {
+    font-size: 0.7rem;
+  }
+}
